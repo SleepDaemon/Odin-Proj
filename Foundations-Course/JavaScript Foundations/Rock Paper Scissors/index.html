@@ -1,0 +1,59 @@
+<html>
+    <link rel="stylesheet" href="style.css"
+
+<head>
+    <title>Rock-Paper-Scissors</title>
+</head>
+
+<body>
+    <h1>Rock-Paper-Scissors</h1>
+    <p>Choose your move:</p>
+    <button id="rock" onclick="playRound('rock')">Rock</button>
+    <button id="paper" onclick="playRound('paper')">Paper</button>
+    <button id="scissors" onclick="playRound('scissors')">Scissors</button>
+    <br><br>
+    <div id="results"></div>
+    <br>
+    <br>
+    <button onclick="window.location.reload()">Restart</button>
+    <script>
+        const options = ['rock', 'paper', 'scissors'];
+        let playerScore = 0;
+        let computerScore = 0;
+        let round = 0;
+
+        const resultsDiv = document.getElementById('results');
+
+        function playRound(playerChoice) {
+            round++;
+            if (round > 5) {
+                if (playerScore > computerScore) {
+                    resultsDiv.innerHTML += `<br> You win the game with a score of ${playerScore} to ${computerScore}!`;
+                } else if (computerScore > playerScore) {
+                    resultsDiv.innerHTML += `<br> Computer wins the game with a score of ${computerScore} to ${playerScore}!`;
+                } else {
+                    resultsDiv.innerHTML += `<br> The game is a tie with a score of ${playerScore} to ${computerScore}!`;
+                }
+                return;
+            }
+            const computerChoice = options[Math.floor(Math.random() * 3)];
+            let outcome;
+            if (playerChoice === computerChoice) {
+                outcome = "It's a tie!";
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                outcome = 'You win!';
+                playerScore++;
+            } else {
+                outcome = 'Computer wins!';
+                computerScore++;
+            }
+            resultsDiv.innerHTML += `Round ${round}: ${outcome} Player: ${playerChoice} Computer: ${computerChoice} <br>`;
+        }
+    </script>
+</body>
+
+</html>

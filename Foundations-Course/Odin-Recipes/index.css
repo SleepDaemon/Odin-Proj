@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url('./fonts/comfortaa.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url('./fonts/Norse.otf') format('truetype');
+}
+
+.title {
+    font-family: 'Norse', sans-serif;
+    font-size: 90px;
+    font-weight: 300;
+    text-align: center;
+    color: #e3c262;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
+    color: #9e5b31;
+    font-family: "Norse", sans-serif;
+}
+
+.lists {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#garfield {
+    font-family: "Lucida Handwriting", sans-serif;
+}
+
+#mozeralla {
+    font-family: "Papyrus", sans-serif;
+    font-weight: 900;
+}
+
+#piglet {
+    font-family: "Comfortaa";
+    font-weight: bold;
+}
+
+#odin {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+
+/* Removes Link Underlines */
+    a:link {
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    a:active {
+        text-decoration: none;
+    }
+/* Removes Link Underlines */
+
+ a {
+     color: #ed5631;
+     text-decoration: none;
+ }
+
+ a:hover {
+     color: #f58b71;
+     text-decoration: none;
+     cursor: pointer;
+ }
